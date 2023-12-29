@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* font-family: "Black Han Sans", sans-serif; */
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #5e4ea6;
+  height: 100vh; /* 이 html의 높이 정해주기 */
+}
+
+body {
+  height: 100%; /* body의 높이 정해주기 */
+  display: flex;
+  flex-direction: column;
+}
+
+/* h1 {
+  font-family: "Black Han Sans", sans-serif;
+} */
+
+header {
+  background-image: url(images/image_03.jpg);
+  /*
+  backgroud 를 이미지로 채울때
+  가장 좋은 방법은 box 크기만큼의 이미지를 사용하는 것
+  
+  그렇지 못할경우는 contain, cover, 가로-세로 크기지정으로
+  이미지를 box 에 채워넣는다
+  이때는 이미지가 왜곡되는 현상이 발생하므로
+  적절한 값을 선택하여 구현한다
+  */
+  background-size: cover;
+  background-position: bottom center;
+  background-attachment: fixed;
+
+  background-repeat: no-repeat;
+  padding: 5rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+/*
+html 과 body의 height 를 100%(100vh) 로 만들고
+body 를 flex 로 설정한 후 main 만 flex : 1 로 설정하면
+세로방향으로 100% 채워진 layout 이 만들어진다
+*/
+main {
+  flex: 1; /* body flex 의 영향을 받는다 */
+  display: flex;
+}
+main aside {
+  flex: 1; /* main flex와 관련있음 aside flex 아님 */
+  color: rgba(255, 255, 255, 0.3);
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center; /* 가로 방향의 중앙 정렬 */
+  justify-content: center; /* 세로 방향의 중앙 정렬 */
+}
+main aside ul {
+  list-style-type: none;
+  width: 80%;
+  margin: 0 16px;
+}
+main aside li {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.7s;
+  text-align: right;
+}
+main aside li:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+main section {
+  flex: 3;
+  border: 1px solid black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+  /* article 에서 absolute 를 사용하기 위한 기준점을 만듦
+  안만들면 html 기준으로 article 이 absolute 함*/
+}
+
+/* 이건 내거한거 
+main section article {
+  border: 1px solid black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+} */
+
+main section article {
+  text-align: center;
+  color: white;
+  font-weight: 900; /* 글씨 두껍게 */
+  font-size: 20px;
+
+  text-transform: uppercase; /* 영문자 대문자로 */
+  line-height: 3rem;
+  letter-spacing: 0.3rem; /* 글자 간격 */
+  /* position: absolute; */
+  /* top: 50%; /* section(부모) box 의 상대적으로 50%를 비워라
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  /* positon 쓰려면 여기까지해야 제대로 중앙 정렬이됨, 고전적인 방법 */
+}
