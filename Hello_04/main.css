@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100vh;
+  font-family: "Noto Sans KR", sans-serif;
+}
+body {
+  height: 70%;
+  background-color: rgb(240, 240, 226);
+}
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+}
+
+img:hover {
+  border: 5px solid #d8d18e;
+  transition: 0.3s;
+}
+
+header {
+  text-align: center;
+  background-color: #d8d18e;
+  color: white;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px #9e9d9d;
+  padding: 2.5rem;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+nav {
+  background-color: #c0d180;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0.5rem;
+}
+
+nav ul li {
+  margin-left: 1rem;
+  padding: 7px;
+  color: white;
+  font-weight: 500;
+}
+
+nav ul li:hover {
+  background-color: #b8b8b8;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+section {
+  height: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: start;
+}
+
+article {
+  flex: 1;
+  margin: 3rem 1rem;
+  text-align: center;
+}
+
+article p {
+  text-align: center;
+  color: #777777;
+  font-weight: 600;
+  display: none;
+  /* visibility: hidden; */
+  transition: 0.1s;
+  /* transform: translate(-100px); */
+}
+article:hover > p {
+  display: block;
+  /* visibility: visible; */
+  /* transform: translate(0px); */
+}
+
+footer {
+  background-color: #d1c980;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  padding: 1rem;
+}
