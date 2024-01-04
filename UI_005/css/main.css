@@ -1,0 +1,117 @@
+/* css 파일에 한글 주석이 있을때 깨짐 방지 */
+@charset "UTF-8";
+
+/* view port(실제 보이는 화면) 만큼 페이지의 높이 설정 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+}
+
+header {
+  background-image: url("../images/image_01.jpg"); /* ./은 내가 있는 폴더, ../*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  /*
+    여백, font 크기, width, height 등을 지정하는 (크기)단위
+    rem과 em 이라는 단위가 있다.
+    화면의 크기가 다양해지는 상황에서 px, pt 등 고정된 크기를
+    사용하기도 하지만, css2 이상에서 rem과 em 이라는 단위가 생겼다
+    이 단위는 주변의 글자의 크기(font-size)를 기준으로 비례적인 크기를
+    설정한다.
+    rem : root(p tag의 글자)를 기준으로 배율로 설정하고
+    em : 현재 주변의 글자크기를 기준으로 배율로 설정한다
+  */
+  padding: 1.3rem;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+nav {
+  background-color: #777;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin-left: 10px;
+}
+
+/* > 를쓰면 해당 태그에만 적용할수 있다 대신 li를 하려면 nav > ul > li 로 해야댐 */
+nav li {
+  /* top right bottom left */
+  padding: 12px 16px 10px 16px;
+  cursor: pointer;
+  margin: 5px;
+  border-bottom: 3px solid transparent; /* 투명색 */
+  transition: 0.7s;
+}
+
+nav li:hover {
+  border-bottom: 3px solid yellow;
+}
+
+/* 2번째 li 왼쪽 마진 auto */
+nav li:nth-child(2) {
+  margin-left: auto;
+}
+
+section.img_container article {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+section.img_container {
+  display: flex;
+  flex-wrap: wrap; /* 화면이 작아지면 밑으로 내려감 */
+  background-image: url(../images/bg1.png);
+  /* 바탕 그림을 반복하여 채워라 */
+  background-repeat: repeat; /* repeat-x 는 x 방향으로 repeat */
+  justify-content: center;
+}
+
+section.img_container img {
+  width: 200px;
+  border-radius: 10px;
+  transition: 0.7s;
+}
+section.img_container img:hover {
+  cursor: pointer;
+  opacity: 0.6; /* 투명해지는 정도 */
+}
+
+section.img_container figcaption {
+  display: inline-block;
+  text-align: center;
+  padding: 3px;
+  color: blue;
+  font-weight: 900;
+  transition: 0.7s;
+}
+section.img_container figcaption:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+footer {
+  background-color: #777;
+  color: white;
+  text-align: center;
+  padding: 0.9rem;
+}
