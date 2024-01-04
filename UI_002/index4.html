@@ -23,12 +23,12 @@
     const btn_add = document.querySelector("div.add");
 
     const btn_add_click_handler = () => {
-      const num1_value = Number(num1.value); // Number 첫글자가 대문자다! 클래스이면서 함수임
+      const num1_value = Number(num1.value); // Number 첫글자가 대문자다! 클래스이면서 함수임, 숫자로바꿔주는 함수
       const num2_value = Number(num2.value); //.value 에 담긴 값을 num2_value 변수에 담기
       if (num1_value === 0) {
         alert("숫자 1 은 반드시 입력하세요");
         num1.focus(); // input box로 마우스 클릭한것처럼 만들어줌
-        return false;
+        return false; // javascript 는 return false로 끝냄
       }
       if (num1_value > 100) {
         alert("숫자 1은 100보다 작게 입력하세요");
