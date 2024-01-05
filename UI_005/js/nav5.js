@@ -23,7 +23,7 @@ main_nav.addEventListener("click", (event) => {
   if (tag_name === "LI") {
     // alert("네비 요소 클릭 : " + nav_text);
     if (nav_text === "HOME") {
-      importHTML(img_container, "./index.html");
+      document.location.href = "./index.html";
     } else if (nav_text === "로그인") {
       importHTML(img_container, "./login.html");
     } else if (nav_text === "회원가입") {
