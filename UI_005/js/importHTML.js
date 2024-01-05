@@ -7,8 +7,8 @@ const importHTML = (tag, file) => {
     // 파일을 읽어서 할 일들을 작성
     // readyState 가 Done 이면 =  브라우저가 파일을 정상적으로 받았으면
     if (xhr.readyState === XMLHttpRequest.DONE) {
-      // 응답해라
-      tag.innerHTML = xhr.responseText();
+      // text를 html로 바꿔서 tag에 입혀 그려내라
+      tag.innerHTML = xhr.responseText;
     }
   };
   // 오픈된 파일을 나에게 보내죠
