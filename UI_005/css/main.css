@@ -65,7 +65,9 @@ nav li {
 nav li:hover {
   border-bottom: 3px solid yellow;
 }
-
+nav li:nth-of-type(1) {
+  text-transform: uppercase;
+}
 /* 2번째 li 왼쪽 마진 auto */
 nav li:nth-child(2) {
   margin-left: auto;
