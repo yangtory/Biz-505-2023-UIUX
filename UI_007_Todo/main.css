@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: rgb(98, 97, 129);
+  background: linear-gradient(63deg, rgba(98, 97, 129, 1) 0%, rgba(205, 214, 208, 1) 0%, rgba(81, 205, 232, 1) 100%);
+  padding: 1.3rem;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+section {
+  width: 70%;
+  margin: 5px auto;
+  border: 3px solid #ddd;
+}
+section.input {
+  display: flex;
+  padding: 10px;
+  text-align: center; /* inline 이니까 */
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+section.input input {
+  flex: 1;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  outline: none;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 1.1rem;
+}
+
+section.input input:focus {
+  border: 2px solid #a3d5e4;
+}
+
+section.input input:hover {
+  background-color: #ececec;
+}
+
+section.input button {
+  padding: 0 40px;
+  border: none;
+  border-radius: 20px;
+  white-space: nowrap; /*화면이 작아져도 그대로*/
+}
+
+section.list {
+  flex: 1;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-top: 2px;
+}
+
+section.list ul {
+  list-style: none;
+}
+
+section.list li {
+  cursor: pointer;
+  background-color: #eee;
+  font-size: 1.1rem;
+
+  /*Browser 호환성 위한 설정*/
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; /*더블클릭 할 때 블럭 안만들기*/
+  padding: 0.8rem;
+  transition: 0.3s;
+  display: flex;
+}
+
+/*odd : 홀수*/
+section.list li:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+section.list li:hover {
+  background-color: #ddd;
+}
+
+section.list li.complete {
+  background-color: #ccc;
+}
+section.list li.complete span.todo {
+  /*li.complete 가 붙어있으면*/
+  text-decoration: line-through;
+  color: #ddd;
+}
+
+/*
+li tag에 complete 가 붙어있지 않으면
+span.complete 에 속성 적용하기
+*/
+section.list li:not(.complete) span.complete {
+  visibility: hidden;
+}
+span.complete {
+  margin: 0 15px;
+  color: red;
+}
+
+span.todo {
+  flex: 1;
+}
+span.close {
+  transition: 0.7s;
+  padding: 0 5px;
+  font-size: 1.1rem;
+  border-radius: 50%;
+}
+span.close:hover {
+  background-color: #a0d1c9;
+}
+
+footer {
+  background-color: #ebebeb;
+  padding: 0.8rem;
+  text-align: center;
+}
