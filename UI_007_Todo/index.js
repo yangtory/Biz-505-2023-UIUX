@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // <span class="complete"></span>
     spanComplete.classList.add("complete");
     spanTodo.classList.add("todo");
-    spanClose.classList.add("class");
+    spanClose.classList.add("close");
 
     spanComplete.innerHTML = "&check;";
     spanTodo.innerHTML = todoContent; // 매개변수를 받은 친구를 가져온다
