@@ -111,6 +111,7 @@ span.complete 에 속성 적용하기
 section.list li:not(.complete) span.complete {
   visibility: hidden;
 }
+
 span.complete {
   margin: 0 15px;
   color: red;

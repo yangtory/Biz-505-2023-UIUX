@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       // closest : 나를 감싸고 있는 부모들 중 가장 가까이 있는 부모
       /* target.closest("LI")
-        클린된 요소(target)을 감싸고 있는 부들 중에
+        클릭된 요소(target)을 감싸고 있는 부모들 중에
         가장 가까이 있는 li tag 
         */
       const liTag = target.closest("LI");
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // <li class="complete"> 와 같은 코드가 된다
       //   liTag.classList.add("complete");
       /*
-       * tag 요소에 class 속성이 설정되면 calssList 에 해당 클래스명이
+       * tag 요소에 class 속성이 설정되면 classList 에 해당 클래스명이
        * 배열로 저장되어 있다.
        * 즉, liTag(li) 에 class 속성이 있고, 값이 complete 이면 제거
        *    만약 없으면 추가
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const addBtn = document.querySelector("section.input button");
-  addBtn?.addEventListener("click", () => {
+  addBtn?.addEventListener("click", () => { // ? null이어도 무시해
     const todo = todoInput.value;
     if (!todo) {
       // todo 가 Falsy 이면, 비어있으면
