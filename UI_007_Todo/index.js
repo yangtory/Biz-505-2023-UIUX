@@ -8,11 +8,11 @@ JS 코드가 html 위, 아래 어디에 있던지 상관없이 실행가능하�
 document.addEventListener("DOMContentLoaded", () => {
   const ulContent = document.querySelector("section.list ul");
   const todoInput = document.querySelector("section.input input");
-  // 3개의 요소를 갖는 리스트 만들기
-  const todoList = ["체육관 가기", "HTML 책 읽기", "책상정리", "영화보기", "라면먹기"];
+  // 요소를 갖는 리스트 만들기
+  const todoList = [];
 
   const createLiTag = (todoContent) => {
-    // <span></span>
+    // <span></span> 만들기
     const spanComplete = document.createElement("SPAN");
     const spanTodo = document.createElement("SPAN");
     const spanClose = document.createElement("SPAN");
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     todoList.forEach((item) => createLiTag(item));
   };
 
-  createTodoList();
+  //   createTodoList(); 만들어놨던 배열의 요소를 보여주기 위해
   /* 
     화면상에 li tag 가 여러개 있는데 querySelector() 를 사용하여
     요청을 하면 화면에서 최초로 발견되는 요소만 select 가 된다
