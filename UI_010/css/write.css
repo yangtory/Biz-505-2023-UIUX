@@ -1,10 +1,26 @@
 form.blog_write {
-  width: 80%;
+  width: 60%;
   margin: 10px auto;
 }
 
+/*legend 랑 같이 쓰기*/
+/*form fieldset 은 form 을 감싸는 제목이 있는 box 만들기*/
+form.blog_write fieldset {
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  /*fieldset 의 제목의 위치를 조절할때 사용하는 속성*/
+  padding: 30px;
+  text-align: center;
+}
+
+/*form 을 감싸는 box 의 제목 설정*/
+form.blog_write legend {
+  padding: 10px;
+  color: #6f6faa;
+}
+
 form.blog_write div {
-  width: 60%;
+  width: 80%;
   margin: 3px auto;
   display: flex;
 }
@@ -19,6 +35,8 @@ form.blog_write label {
   text-align: right;
   color: blue;
   font-weight: bold;
+  box-shadow: 1px 1px 1px rgba(150, 150, 150, 0.7);
+  background-color: #eee;
 }
 
 form.blog_write input,
@@ -37,4 +55,28 @@ form.blog_write textarea:hover {
 form.blog_write input:focus,
 form.blog_write textarea:focus {
   border: 1px solid green;
+}
+
+div.btn_box label {
+  background-color: white;
+  box-shadow: none;
+}
+/* 저장위치 맞추기 */
+div.btn_box div {
+  flex: 2;
+  margin: 5px;
+}
+
+div.btn_box button {
+  width: 100px;
+  padding: 10px 18px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
+}
+
+div.btn_box button:hover {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
